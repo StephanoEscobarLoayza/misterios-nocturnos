@@ -1,8 +1,305 @@
 <!DOCTYPE html>
-<html>
-<head><meta charset="utf-8"><title>Privacy Policy</title></head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Misterios Nocturnos</title>
+<style>
+  :root {
+    --bg:        #F5F3EF;
+    --surface:   #EAE6F2;
+    --border:    #D4CEDF;
+    --text:      #1A1726;
+    --secondary: #5A546A;
+    --accent:    #7C5CBF;
+    --accent-dk: #9D7EDA;
+    --link:      #6247AA;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:        #0C0B10;
+      --surface:   #1A1726;
+      --border:    #2D2938;
+      --text:      #F0EDF8;
+      --secondary: #9490A8;
+      --accent:    #9D7EDA;
+      --accent-dk: #7C5CBF;
+      --link:      #B49EE8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg:        #0C0B10;
+    --surface:   #1A1726;
+    --border:    #2D2938;
+    --text:      #F0EDF8;
+    --secondary: #9490A8;
+    --accent:    #9D7EDA;
+    --accent-dk: #7C5CBF;
+    --link:      #B49EE8;
+  }
+  :root[data-theme="light"] {
+    --bg:        #F5F3EF;
+    --surface:   #EAE6F2;
+    --border:    #D4CEDF;
+    --text:      #1A1726;
+    --secondary: #5A546A;
+    --accent:    #7C5CBF;
+    --accent-dk: #9D7EDA;
+    --link:      #6247AA;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    padding: 48px 24px 96px;
+  }
+
+  .doc {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  header {
+    margin-bottom: 48px;
+    padding-bottom: 32px;
+    border-bottom: 1.5px solid var(--border);
+  }
+
+  .eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 12px;
+  }
+
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: normal;
+    line-height: 1.2;
+    color: var(--text);
+    text-wrap: balance;
+    margin-bottom: 16px;
+  }
+
+  .meta {
+    font-size: 0.875rem;
+    color: var(--secondary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 24px;
+  }
+
+  .meta span { white-space: nowrap; }
+
+  section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+  }
+
+  section:first-of-type {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: normal;
+    color: var(--text);
+    margin-bottom: 16px;
+    text-wrap: balance;
+  }
+
+  p {
+    color: var(--text);
+    margin-bottom: 16px;
+    max-width: 65ch;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul, ol {
+    padding-left: 1.5rem;
+    margin-bottom: 16px;
+    max-width: 65ch;
+  }
+
+  li { margin-bottom: 6px; color: var(--text); }
+
+  .callout {
+    background: var(--surface);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 6px 6px 0;
+    padding: 16px 20px;
+    margin: 24px 0;
+    font-size: 0.9375rem;
+  }
+
+  .callout p { margin-bottom: 0; }
+
+  a {
+    color: var(--link);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  a:hover { color: var(--accent); }
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  code {
+    font-family: ui-monospace, "Cascadia Code", "Fira Mono", monospace;
+    font-size: 0.85em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 1px 5px;
+    border-radius: 4px;
+    word-break: break-all;
+  }
+
+  footer {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1.5px solid var(--border);
+    font-size: 0.85rem;
+    color: var(--secondary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    section { animation: fadein 0.25s ease both; }
+  }
+  @keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+</style>
+</head>
 <body>
-<h1>Privacy Policy</h1>
-<p>This app does not collect personal data. Contact: stephanoescobar2004@gmail.com</p>
+<div class="doc">
+
+  <header>
+    <p class="eyebrow">Misterios Nocturnos</p>
+    <h1>Privacy Policy</h1>
+    <div class="meta">
+      <span>Effective date: August 3, 2026</span>
+      <span>Last updated: August 3, 2026</span>
+    </div>
+  </header>
+
+  <section>
+    <h2>1. About This Application</h2>
+    <p>
+      <strong>Misterios Nocturnos</strong> is a personal desktop application developed by Stephano Escobar Loayza
+      for the exclusive purpose of managing the creator's own YouTube and TikTok content.
+      The application is not distributed publicly and has no registered end-users other than its sole developer.
+    </p>
+    <div class="callout">
+      <p>This application operates entirely on the developer's local machine. It does not run a public server, does not operate a database, and does not transmit personal data to any third party.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>2. Information We Access</h2>
+    <p>When connected to TikTok via OAuth 2.0, the application requests the following permission scopes:</p>
+    <ul>
+      <li><code>user.info.profile</code> — display name and profile picture</li>
+      <li><code>user.info.stats</code> — follower count, following count, video count, and total likes</li>
+      <li><code>video.list</code> — list of videos published on the connected TikTok account</li>
+      <li><code>video.upload</code> — ability to upload new videos to the connected TikTok account</li>
+    </ul>
+    <p>This data is used exclusively to display channel statistics and upload content on behalf of the account owner (the developer), within the desktop application.</p>
+  </section>
+
+  <section>
+    <h2>3. How We Store Data</h2>
+    <p>
+      Authentication credentials issued by TikTok (OAuth access token and refresh token) are saved
+      to a local JSON file named <code>tiktok_token.json</code> on the developer's own computer.
+      This file is protected by the operating system's standard file permission model and is never
+      uploaded to any server or cloud service.
+    </p>
+    <p>
+      Profile statistics and video metadata retrieved from the TikTok API are held in memory during
+      the application session only. No data is written to a remote database or analytics service.
+    </p>
+  </section>
+
+  <section>
+    <h2>4. Data Sharing and Third Parties</h2>
+    <p>
+      We do not sell, rent, share, or disclose any data to third parties. The only external system
+      that receives data is the <strong>TikTok API</strong> itself, as part of the OAuth 2.0 authorization
+      flow and subsequent API calls initiated by the application owner.
+    </p>
+    <p>All communication with TikTok's servers uses HTTPS, as required by TikTok's API specification.</p>
+  </section>
+
+  <section>
+    <h2>5. Data Retention and Deletion</h2>
+    <p>
+      Stored tokens can be revoked and deleted at any time by:
+    </p>
+    <ul>
+      <li>Deleting the <code>tiktok_token.json</code> file from the local file system, or</li>
+      <li>Revoking the application's access directly from the TikTok account security settings at
+          <a href="https://www.tiktok.com/setting" rel="noopener noreferrer">tiktok.com/setting</a>.</li>
+    </ul>
+    <p>Once revoked, the application cannot make any further API calls until the OAuth flow is restarted by the account owner.</p>
+  </section>
+
+  <section>
+    <h2>6. Cookies and Tracking</h2>
+    <p>
+      This application is a native desktop application and does not use cookies, web beacons,
+      pixel tracking, or any similar technology. No analytics SDK is embedded.
+    </p>
+  </section>
+
+  <section>
+    <h2>7. Children's Privacy</h2>
+    <p>
+      This application is not directed at children under the age of 13. It is a personal productivity
+      tool used solely by its developer and is not available for download by the general public.
+    </p>
+  </section>
+
+  <section>
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      If this policy is updated, the "Last updated" date at the top of this page will change.
+      Because this application is personal and has a single user (the developer), no additional
+      notification mechanism is required.
+    </p>
+  </section>
+
+  <section>
+    <h2>9. Contact</h2>
+    <p>For any questions regarding this privacy policy, please contact:</p>
+    <p>
+      <strong>Stephano Escobar Loayza</strong><br>
+      <a href="mailto:stephanoescobar2004@gmail.com">stephanoescobar2004@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <span>Misterios Nocturnos &mdash; Personal Content Manager</span>
+    <span>&copy; 2026 Stephano Escobar Loayza</span>
+  </footer>
+
+</div>
 </body>
 </html>
